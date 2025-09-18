@@ -40,6 +40,19 @@ class _LoginPageState extends State<LoginPage> {
                   height: 200.0,
                   child: Image.asset('assets/grafix.png'),
                 ),
+
+                const Text( 
+                  'Welcome to Grafix',
+                  style: TextStyle(
+                    fontSize: 32,
+                    color: Color(0xFF4b5ae4),
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+
+                const Text(
+                  'Digital Products Marketplace',
+                ),
                 
               ],
             ),
