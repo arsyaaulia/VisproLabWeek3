@@ -49,16 +49,14 @@ class _LoginPageState extends State<LoginPage> {
 
             // TODO: Add TextField widgets (101)
             // [Name]
+
+            // TextField(
+            //   controller: _usernameController,
+            // ),
+
             TextField(
               controller: _usernameController,
-            ),
-
-            //[password]
-            TextField(
-              controller: _passwordController,
-            ),
-            const TextField(
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 filled: true,
                 fillColor: Color(0xFFe8f0fc), //tambah 0xFF di depan, sdah default
                 labelText: 'Username',
@@ -69,8 +67,12 @@ class _LoginPageState extends State<LoginPage> {
             const SizedBox(height: 12.0),
 
             // [Password]
-            const TextField(
-              decoration: InputDecoration(
+            // TextField(
+            //   controller: _passwordController,
+            // ),
+            TextField(
+              controller: _passwordController,
+              decoration: const InputDecoration(
                 filled: true,
                 fillColor: Color(0xFFe8f0fc),
                 labelText: 'Password',
