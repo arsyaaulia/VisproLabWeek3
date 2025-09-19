@@ -18,7 +18,7 @@ class ProductsRepository {
   static List<Product> loadProducts(Category category) {
     const allProducts = <Product>[
       Product(
-        category: Category.accessories,
+        category: Category.Poster,
         id: 0,
         isFeatured: true,
         name: 'Poster Gudeg Yogya',
@@ -27,7 +27,7 @@ class ProductsRepository {
       ),
 
       Product(
-        category: Category.accessories,
+        category: Category.Poster,
         id: 0,
         isFeatured: true,
         name: 'Poster Samber Gelap Island',
@@ -36,7 +36,7 @@ class ProductsRepository {
       ),
       
       Product(
-        category: Category.accessories,
+        category: Category.Poster,
         id: 0,
         isFeatured: true,
         name: 'Poster Majukan Indonesia',
@@ -45,7 +45,7 @@ class ProductsRepository {
       ),
       
       Product(
-        category: Category.accessories,
+        category: Category.Poster,
         id: 0,
         isFeatured: true,
         name: 'Poster Kesehatan Mata',
@@ -54,7 +54,7 @@ class ProductsRepository {
       ),
       
       Product(
-        category: Category.accessories,
+        category: Category.Poster,
         id: 0,
         isFeatured: true,
         name: 'Poster Dive into English Literacy ',
@@ -63,7 +63,7 @@ class ProductsRepository {
       ),
       
       Product(
-        category: Category.accessories,
+        category: Category.Poster,
         id: 0,
         isFeatured: true,
         name: 'Poster Thrive',
@@ -72,7 +72,7 @@ class ProductsRepository {
       ),
       
       Product(
-        category: Category.accessories,
+        category: Category.IG,
         id: 0,
         isFeatured: true,
         name: 'Poster Oprec',
@@ -81,7 +81,7 @@ class ProductsRepository {
       ),
       
       Product(
-        category: Category.accessories,
+        category: Category.IG,
         id: 0,
         isFeatured: true,
         name: 'Poster Hari Pendidikan',
@@ -90,7 +90,7 @@ class ProductsRepository {
       ),
       
       Product(
-        category: Category.accessories,
+        category: Category.Poster,
         id: 0,
         isFeatured: true,
         name: 'Poster Missing',
@@ -99,7 +99,7 @@ class ProductsRepository {
       ),
       
       Product(
-        category: Category.accessories,
+        category: Category.Youtube,
         id: 0,
         isFeatured: true,
         name: 'Thumbnail YT Cinamatic',
@@ -108,7 +108,7 @@ class ProductsRepository {
       ),
       
       Product(
-        category: Category.accessories,
+        category: Category.Youtube,
         id: 0,
         isFeatured: true,
         name: 'Thumbnail YT Podcast',
@@ -117,7 +117,7 @@ class ProductsRepository {
       ),
       
       Product(
-        category: Category.accessories,
+        category: Category.Poster,
         id: 0,
         isFeatured: true,
         name: 'Halftone Poster',
@@ -126,7 +126,7 @@ class ProductsRepository {
       ),
       
       Product(
-        category: Category.accessories,
+        category: Category.IG,
         id: 0,
         isFeatured: true,
         name: 'Carousel Scrapbook Theme',
@@ -135,7 +135,7 @@ class ProductsRepository {
       ),
       
       Product(
-        category: Category.accessories,
+        category: Category.IG,
         id: 0,
         isFeatured: true,
         name: 'IGS Poster',
@@ -144,7 +144,7 @@ class ProductsRepository {
       ),
       
       Product(
-        category: Category.accessories,
+        category: Category.Lainnya,
         id: 0,
         isFeatured: true,
         name: 'Game Signboard',
@@ -153,106 +153,106 @@ class ProductsRepository {
       ),
       
       Product(
-        category: Category.accessories,
+        category: Category.IG,
         id: 0,
         isFeatured: true,
-        name: 'Poster Buruh',
+        name: 'Hari Buruh',
         price: 20000,
         assetName: 'assets/img/Produk16.png',
       ),
       
       Product(
-        category: Category.accessories,
+        category: Category.PPT,
         id: 0,
         isFeatured: true,
-        name: 'PPT: Semi Pixel',
+        name: 'Minmalist Semi Pixel',
         price: 15000,
         assetName: 'assets/img/Produk17.png',
       ),
       
       Product(
-        category: Category.accessories,
+        category: Category.PPT,
         id: 0,
         isFeatured: true,
-        name: 'PPT: Old English Newspaper',
+        name: 'Vintage English Newspaper',
         price: 15000,
         assetName: 'assets/img/Produk18.png',
       ),
       
       Product(
-        category: Category.accessories,
+        category: Category.PPT,
         id: 0,
         isFeatured: true,
-        name: 'PPT: Indonesian Theme',
+        name: 'Indonesian Theme',
         price: 15000,
         assetName: 'assets/img/Produk19.png',
       ),
       
       Product(
-        category: Category.accessories,
+        category: Category.PPT,
         id: 0,
         isFeatured: true,
-        name: 'Desain PPT; Dinosaur',
+        name: 'MV Dinosaur by AKMU',
         price: 17000,
         assetName: 'assets/img/Produk20.png',
       ),
       
       Product(
-        category: Category.accessories,
+        category: Category.PPT,
         id: 0,
         isFeatured: true,
-        name: 'Desain PPT: Y2K Retro Teck',
+        name: 'Y2K Retro Teck',
         price: 15000,
         assetName: 'assets/img/Produk21.png',
       ),
       
       Product(
-        category: Category.accessories,
+        category: Category.PPT,
         id: 0,
         isFeatured: true,
-        name: 'Desain PPT: Minimalist Black n White',
+        name: 'Minimalist Black n White',
         price: 15000,
         assetName: 'assets/img/Produk22.png',
       ),
       
       Product(
-        category: Category.accessories,
+        category: Category.IG,
         id: 0,
         isFeatured: true,
-        name: 'IG Feeds [4x3]: Elysian Explores',
+        name: 'Elysian Explores',
         price: 20000,
         assetName: 'assets/img/Produk23.png',
       ),
 
       Product(
-        category: Category.accessories,
+        category: Category.Poster,
         id: 0,
         isFeatured: true,
-        name: 'Poster: Restart',
+        name: 'Restart',
         price: 1000,
         assetName: 'assets/img/Produk24.png',
       ),
       
       Product(
-        category: Category.accessories,
+        category: Category.IG,
         id: 0,
         isFeatured: true,
-        name: 'IG Story Poster: Hari Pancasila',
+        name: 'Hari Pancasila',
         price: 15000,
         assetName: 'assets/img/Produk25.png',
       ),
       
       Product(
-        category: Category.accessories,
+        category: Category.IG,
         id: 0,
         isFeatured: true,
-        name: 'IG Post: Minimalist 1',
+        name: 'Minimalist 1',
         price: 5000,
         assetName: 'assets/img/Produk26.png',
       ),
       
       Product(
-        category: Category.accessories,
+        category: Category.IG,
         id: 0,
         isFeatured: true,
         name: 'Feeds Web Theme',
@@ -261,7 +261,7 @@ class ProductsRepository {
       ),
       
       Product(
-        category: Category.accessories,
+        category: Category.Lainnya,
         id: 0,
         isFeatured: true,
         name: 'Karya Ilimiah Remaja',
@@ -270,7 +270,7 @@ class ProductsRepository {
       ),
 
       Product(
-        category: Category.accessories,
+        category: Category.IG,
         id: 0,
         isFeatured: true,
         name: 'Feeds FairyTale Theme',
@@ -279,7 +279,7 @@ class ProductsRepository {
       ),
       
       Product(
-        category: Category.accessories,
+        category: Category.IG,
         id: 0,
         isFeatured: true,
         name: 'Feeds Beach Theme',
@@ -288,7 +288,7 @@ class ProductsRepository {
       ),
       
       Product(
-        category: Category.accessories,
+        category: Category.IG,
         id: 0,
         isFeatured: true,
         name: 'Carousel',
@@ -297,7 +297,7 @@ class ProductsRepository {
       ),
 
       Product(
-        category: Category.accessories,
+        category: Category.Lainnya,
         id: 0,
         isFeatured: true,
         name: 'Desain Tumblr',
@@ -306,7 +306,7 @@ class ProductsRepository {
       ),
 
       Product(
-        category: Category.accessories,
+        category: Category.Poster,
         id: 0,
         isFeatured: true,
         name: 'Poster Beach Theme',
@@ -315,7 +315,7 @@ class ProductsRepository {
       ),
 
       Product(
-        category: Category.accessories,
+        category: Category.Lainnya,
         id: 0,
         isFeatured: true,
         name: 'Game Signboard Purple Forest',
@@ -324,7 +324,7 @@ class ProductsRepository {
       ),
 
       Product(
-        category: Category.accessories,
+        category: Category.Lainnya,
         id: 0,
         isFeatured: true,
         name: 'Game Signboard Main Forest',
@@ -333,7 +333,7 @@ class ProductsRepository {
       ),
 
       Product(
-        category: Category.accessories,
+        category: Category.Lainnya,
         id: 0,
         isFeatured: true,
         name: 'Frame Photobooth',
@@ -342,7 +342,7 @@ class ProductsRepository {
       ),
       
       Product(
-        category: Category.accessories,
+        category: Category.Lainnya,
         id: 0,
         isFeatured: true,
         name: 'Rangkuman Fisika',
@@ -351,7 +351,7 @@ class ProductsRepository {
       ),
 
       Product(
-        category: Category.accessories,
+        category: Category.IG,
         id: 0,
         isFeatured: true,
         name: 'Poster Kartini',

@@ -13,6 +13,7 @@
 // limitations under the License.
 
 import 'package:flutter/material.dart';
+import 'colors.dart';
 
 class LoginPage extends StatefulWidget {
 const LoginPage({Key? key}) : super(key: key);
@@ -28,7 +29,7 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: (Colors.white), 
+      // backgroundColor: (Colors.white), 
       body: SafeArea(
         child: ListView(
           padding: const EdgeInsets.symmetric(horizontal: 24.0),
@@ -41,13 +42,18 @@ class _LoginPageState extends State<LoginPage> {
                   child: Image.asset('assets/grafix.png'),
                 ),
 
-                const Text( 
-                  'Welcome to Grafix',
-                  style: TextStyle(
-                    fontSize: 32,
-                    color: Color(0xFF4b5ae4),
-                    fontWeight: FontWeight.bold,
-                  ),
+                // const Text( 
+                //   'Welcome to Grafix',
+                //   style: TextStyle(
+                //     fontSize: 32,
+                //     color: Color(0xFF4b5ae4),
+                //     fontWeight: FontWeight.bold,
+                //   ),
+                // ),
+
+                Text(
+                  'GRAFIX',
+                  style: Theme.of(context).textTheme.headlineSmall,
                 ),
 
                 const Text(
@@ -58,7 +64,23 @@ class _LoginPageState extends State<LoginPage> {
             ),
             
             const SizedBox(height: 120.0),
-            // TODO: Remove filled: true values (103)
+            // Remove filled: true values (103)
+            TextField(
+              controller: _usernameController,
+              decoration: const InputDecoration(
+                // Removed filled: true
+                labelText: 'Username',
+              ),
+            ),
+            const SizedBox(height: 12.0),
+            TextField(
+              controller: _passwordController,
+              decoration: const InputDecoration(
+                // Removed filled: true
+                labelText: 'Password',
+              ),
+              obscureText: true,
+            ),
 
             // TODO: Add TextField widgets (101)
             // [Name]
@@ -67,14 +89,14 @@ class _LoginPageState extends State<LoginPage> {
             //   controller: _usernameController,
             // ),
 
-            TextField(
-              controller: _usernameController,
-              decoration: const InputDecoration(
-                filled: true,
-                fillColor: Color(0xFFe8f0fc), //tambah 0xFF di depan, sdah default
-                labelText: 'Username',
-              ),
-            ),
+            // TextField(
+            //   controller: _usernameController,
+            //   decoration: const InputDecoration(
+            //     filled: true,
+            //     fillColor: Color(0xFFe8f0fc), //tambah 0xFF di depan, sdah default
+            //     labelText: 'Username',
+            //   ),
+            // ),
 
             // spacer
             const SizedBox(height: 12.0),
@@ -83,15 +105,15 @@ class _LoginPageState extends State<LoginPage> {
             // TextField(
             //   controller: _passwordController,
             // ),
-            TextField(
-              controller: _passwordController,
-              decoration: const InputDecoration(
-                filled: true,
-                fillColor: Color(0xFFe8f0fc),
-                labelText: 'Password',
-              ),
-              obscureText: true,
-            ),
+            // TextField(
+            //   controller: _passwordController,
+            //   decoration: const InputDecoration(
+            //     filled: true,
+            //     fillColor: Color(0xFFe8f0fc),
+            //     labelText: 'Password',
+            //   ),
+            //   obscureText: true,
+            // ),
             
             //spacer
             const SizedBox(height: 12.0),
@@ -108,10 +130,16 @@ class _LoginPageState extends State<LoginPage> {
                 TextButton(
                   child: const Text('CANCEL'),
                   onPressed: () {
-                  // TODO: Clear the text fields (101)
-                  _usernameController.clear();
-                  _passwordController.clear();
+                    // TODO: Clear the text fields (101)
+                    _usernameController.clear();
+                    _passwordController.clear();
                   },
+                  style: TextButton.styleFrom(
+                    foregroundColor: kShrineBlue900,
+                    shape: const BeveledRectangleBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(7.0))
+                    ),
+                  )
                 ),
                 
                 //spacer between CANCEL and NEXT
@@ -119,15 +147,21 @@ class _LoginPageState extends State<LoginPage> {
                 // TODO: Add an elevation to NEXT (103)
                 // TODO: Add a beveled rectangular border to NEXT (103)
                 ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Color(0xFF4b5ae4),
-                    foregroundColor: Colors.white,
-                  ),
                   child: const Text('NEXT'),
                   onPressed: () {
                     // TODO: Show the next page (101) 
                     Navigator.pop(context);
                   },
+                  
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: kShrineBlue900,
+                    foregroundColor: kShrineBlue100,
+
+                    elevation: 8.0,
+                    shape: BeveledRectangleBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(7.0))
+                    ),
+                  ),
                 ),
               ],
             ),

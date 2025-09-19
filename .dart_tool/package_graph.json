@@ -55,14 +55,6 @@
       "dependencies": []
     },
     {
-      "name": "intl",
-      "version": "0.17.0",
-      "dependencies": [
-        "clock",
-        "path"
-      ]
-    },
-    {
       "name": "flutter",
       "version": "0.0.0",
       "dependencies": [
@@ -241,6 +233,15 @@
       "name": "vm_service",
       "version": "15.0.2",
       "dependencies": []
+    },
+    {
+      "name": "intl",
+      "version": "0.18.1",
+      "dependencies": [
+        "clock",
+        "meta",
+        "path"
+      ]
     }
   ],
   "configVersion": 1

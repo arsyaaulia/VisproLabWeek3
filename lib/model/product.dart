@@ -14,9 +14,11 @@
 
 enum Category {
   all,
-  accessories,
-  clothing,
-  home,
+  Poster,
+  Youtube,
+  IG,
+  PPT,
+  Lainnya,
 }
 
 class Product {
@@ -40,6 +42,8 @@ class Product {
   final int price;
 
   final String assetName;
+
+  String? get assetPackage => null;
   // final String? assetPackage;
 
   @override
