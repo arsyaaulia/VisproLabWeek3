@@ -30,6 +30,7 @@ flutter:
   assets:
     - assets/grafix.png
     - assets/diamond.png
+    - assets/slanted_menu.png
     # TODO: Add slanted menu asset (104)
     - assets/img/Produk1.png
     - assets/img/Produk2.png

@@ -19,20 +19,52 @@ import 'login.dart';
 import 'colors.dart';
 import 'supplemental/cut_corners_border.dart';
 
-// TODO: Convert ShrineApp to stateful widget (104)
-class ShrineApp extends StatelessWidget {
-  const ShrineApp({Key? key}) : super(key: key);
+import 'backdrop.dart'; // New code
+import 'model/product.dart'; // New code
 
+import 'category_menu_page.dart';
+
+// TODO: Convert ShrineApp to stateful widget (104)
+class ShrineApp extends StatefulWidget {
+  const ShrineApp({Key? key}) : super(key: key);
+  @override
+    State<ShrineApp> createState() => _ShrineAppState();
+}
+
+class _ShrineAppState extends State<ShrineApp> {
+  // Tambahan: menyimpan kategori aktif
+  Category _currentCategory = Category.all;
+
+  // Tambahan: callback saat kategori dipilih
+  void _onCategoryTap(Category category) {
+    setState(() {
+      _currentCategory = category;
+    });
+  }
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Shrine',
+      title: 'GRAFIX',
       initialRoute: '/login',
       routes: {
         '/login': (BuildContext context) => const LoginPage(),
         // TODO: Change to a Backdrop with a HomePage frontLayer (104)
-        '/': (BuildContext context) => const HomePage(),
-        // TODO: Make currentCategory field take _currentCategory (104)
+        '/': (BuildContext context) => Backdrop(
+              // TODO: Make currentCategory field take _currentCategory (104)
+              currentCategory: _currentCategory,
+
+              // TODO: Pass _currentCategory for frontLayer (104)
+              frontLayer: HomePage(category: _currentCategory),
+
+              // TODO: Change backLayer field value to CategoryMenuPage (104)
+              backLayer: CategoryMenuPage(
+                currentCategory: _currentCategory,
+                onCategoryTap: _onCategoryTap,
+              ),
+              frontTitle: const Text('GRAFIX'),
+              backTitle: const Text('MENU'),
+            ),
+                // TODO: Make currentCategory field take _currentCategory (104)
         // TODO: Pass _currentCategory for frontLayer (104)
         // TODO: Change backLayer field value to CategoryMenuPage (104)
       },
@@ -71,31 +103,32 @@ TextTheme _buildShrineTextTheme(TextTheme base) {
 }
 
 ThemeData _buildShrineTheme() {
-  final ThemeData base = ThemeData.light();
+  final ThemeData base = ThemeData.light(useMaterial3: true);
   return base.copyWith(
     colorScheme: base.colorScheme.copyWith(
-      primary: kShrineBlue400,
-      secondary: kShrineBlue300,
+      primary: kShrineBlue100,
+      onPrimary: kShrineBlue900,
+      secondary: kShrineBlue900,
       error: kShrineErrorRed,
     ),
-    scaffoldBackgroundColor: kShrineBlue50,
+    textTheme: _buildShrineTextTheme(base.textTheme),
     textSelectionTheme: const TextSelectionThemeData(
-      selectionColor: kShrineBlue400,
+      selectionColor: kShrineBlue100,
     ),
     appBarTheme: const AppBarTheme(
-      foregroundColor: kShrineSurfaceWhite,
-      backgroundColor: kShrineBlue900,
+      foregroundColor: kShrineBlue900,
+      backgroundColor: kShrineBlue100,
     ),
     inputDecorationTheme: const InputDecorationTheme(
       border: CutCornersBorder(),
       focusedBorder: CutCornersBorder(
         borderSide: BorderSide(
           width: 2.0,
-          color: kShrineBlue400,
+          color: kShrineBlue900,
         ),
       ),
       floatingLabelStyle: TextStyle(
-        color: kShrineBlue400,
+        color: kShrineBlue900,
       ),
     ),
   );

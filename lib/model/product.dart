@@ -46,10 +46,10 @@ class Product {
 
   String? get assetPackage => null;
 
-   String get hargaRupiah {
+  String get hargaRupiah {
     final formatter = NumberFormat("#,###", "id_ID");
     return "Rp ${formatter.format(price)}";
-   }
+  }
   // final String? assetPackage;
 
   @override
