@@ -14,16 +14,14 @@
 
 import 'package:flutter/material.dart';
 
-import 'supplemental/cut_corners_border.dart';
-import 'colors.dart';
 import 'home.dart';
 import 'login.dart';
+import 'colors.dart';
+import 'supplemental/cut_corners_border.dart';
 
 // TODO: Convert ShrineApp to stateful widget (104)
 class ShrineApp extends StatelessWidget {
   const ShrineApp({Key? key}) : super(key: key);
-  
-  ThemeData? get _kShrineTheme => null;
 
   @override
   Widget build(BuildContext context) {
@@ -39,101 +37,67 @@ class ShrineApp extends StatelessWidget {
         // TODO: Change backLayer field value to CategoryMenuPage (104)
       },
       // TODO: Customize the theme (103)
-      theme: _kShrineTheme,
+      theme: _kShrineTheme, // New code
     );
   }
 }
 
 // TODO: Build a Shrine Theme (103)
-
-// ThemeData _buildShrineTheme() {
-//   final ThemeData base = ThemeData.light();
-//   return base.copyWith(
-//     colorScheme: base.colorScheme.copyWith(
-//       primary: kShrinePurple,
-//       secondary: kShrinePurple,
-//       error: kShrineErrorRed,
-//     ),
-//     scaffoldBackgroundColor: kShrineSurfaceWhite,
-//     textSelectionTheme: const TextSelectionThemeData(
-//       selectionColor: kShrinePurple,
-//     ),
-//     inputDecorationTheme: const InputDecorationTheme(
-//       border: CutCornersBorder(),
-//       focusedBorder: CutCornersBorder(
-//         borderSide: BorderSide(
-//           width: 2.0,
-//           color: kShrinePurple,
-//         ),
-//       ),
-//       floatingLabelStyle: TextStyle(
-//         color: kShrinePurple,
-//       ),
-//     ),
-//   );
-// }
-
-
 final ThemeData _kShrineTheme = _buildShrineTheme();
+// TODO: Build a Shrine Text Theme (103)
+TextTheme _buildShrineTextTheme(TextTheme base) {
+  return base
+      .copyWith(
+        headlineSmall: base.headlineSmall!.copyWith(
+          fontWeight: FontWeight.w500,
+        ),
+        titleLarge: base.titleLarge!.copyWith(
+          fontSize: 18.0,
+        ),
+        bodySmall: base.bodySmall!.copyWith(
+          fontWeight: FontWeight.w400,
+          fontSize: 14.0,
+        ),
+        bodyLarge: base.bodyLarge!.copyWith(
+          fontWeight: FontWeight.w500,
+          fontSize: 16.0,
+        ),
+      )
+      .apply(
+        fontFamily: 'Rubik',
+        displayColor: kShrineBlue900,
+        bodyColor: kShrineBlue900,
+      );
+}
 
 ThemeData _buildShrineTheme() {
-  final ThemeData base = ThemeData.light(useMaterial3: true);
-  
+  final ThemeData base = ThemeData.light();
   return base.copyWith(
     colorScheme: base.colorScheme.copyWith(
-      primary: kShrineBlue100,
-      onPrimary: kShrineBlue900,
-      secondary: kShrineBlue900,
+      primary: kShrineBlue400,
+      secondary: kShrineBlue300,
       error: kShrineErrorRed,
     ),
-
-    
-    // TODO: Add the text themes (103)
-   
-    textTheme: _buildShrineTextTheme(base.textTheme),
+    scaffoldBackgroundColor: kShrineBlue50,
     textSelectionTheme: const TextSelectionThemeData(
-      selectionColor: kShrineBlue100,
+      selectionColor: kShrineBlue400,
     ),
-    
-    // TODO: Decorate the inputs (103)
+    appBarTheme: const AppBarTheme(
+      foregroundColor: kShrineSurfaceWhite,
+      backgroundColor: kShrineBlue900,
+    ),
     inputDecorationTheme: const InputDecorationTheme(
       border: CutCornersBorder(),
       focusedBorder: CutCornersBorder(
         borderSide: BorderSide(
           width: 2.0,
-          color: kShrineBlue900,
+          color: kShrineBlue400,
         ),
       ),
-
       floatingLabelStyle: TextStyle(
-        color: kShrineBlue900,
+        color: kShrineBlue400,
       ),
-
     ),
   );
 }
-
-
 // TODO: Build a Shrine Text Theme (103)
-TextTheme _buildShrineTextTheme(TextTheme base) {
-  return base.copyWith(
-    headlineSmall: base.headlineSmall!.copyWith(
-      fontWeight: FontWeight.w500,
-    ),
-    titleLarge: base.titleLarge!.copyWith(
-      fontSize: 18.0,
-    ),
-    bodySmall: base.bodySmall!.copyWith(
-      fontWeight: FontWeight.w400,
-      fontSize: 14.0,
-    ),
-    bodyLarge: base.bodyLarge!.copyWith(
-      fontWeight: FontWeight.w500,
-      fontSize: 16.0,
-    ),
-  ).apply(
-    fontFamily: 'Rubik',
-    displayColor: kShrineBlue900,
-    bodyColor: kShrineBlue900,
-  );
-}

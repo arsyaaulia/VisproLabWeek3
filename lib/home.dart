@@ -14,6 +14,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:shrine/supplemental/product_card.dart';
+import 'supplemental/asymmetric_view.dart';
 
 import 'model/product.dart';
 import 'model/products_repository.dart';
@@ -33,10 +35,10 @@ class HomePage extends StatelessWidget {
     }
 
     final ThemeData theme = Theme.of(context);
-    final NumberFormat formatter = NumberFormat.currency(
-        locale: 'id_ID',
-        symbol: 'Rp',
-        decimalDigits: 0,);
+    // final NumberFormat formatter = NumberFormat.currency(
+    //     locale: 'id_ID',
+    //     symbol: 'Rp',
+    //     decimalDigits: 0,);
 
 
     return products.map((product) {
@@ -70,10 +72,10 @@ class HomePage extends StatelessWidget {
                       maxLines: 1,
                     ),
                     const SizedBox(height: 8.0),
-                    Text(
-                      formatter.format(product.price),
-                      style: theme.textTheme.titleSmall,
-                    ),
+                    // Text(
+                    //   formatter.format(product.price),
+                    //   style: theme.textTheme.titleSmall,
+                    // ),
                   ],
                 ),
               ),
@@ -131,12 +133,20 @@ class HomePage extends StatelessWidget {
       ),
       // TODO: Add a grid view (102)
       
-      body: GridView.count(
-        crossAxisCount: 2,
-        padding: const EdgeInsets.all(16.0),
-        childAspectRatio: 8.0 / 9.0,
-        children: _buildGridCards(context) // Changed code
+      body: AsymmetricView(
+        products: ProductsRepository.loadProducts(Category.all),
       ),
+
+      // body: GridView.count(
+      //   crossAxisCount: 2, // jumlah kolom
+      //   padding: const EdgeInsets.all(16.0),
+      //   childAspectRatio: 8.0 / 9.0, // proporsi card biar mirip contoh MDC
+      //   children: ProductsRepository.loadProducts(Category.all)
+      //       .map((product) => ProductCard(product: product))
+      //       .toList(),
+      // ),
+
+
       // TODO: Set resizeToAvoidBottomInset (101)
       resizeToAvoidBottomInset: false,
     );

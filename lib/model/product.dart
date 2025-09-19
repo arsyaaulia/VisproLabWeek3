@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+import 'package:intl/intl.dart';
 enum Category {
   all,
   Poster,
@@ -44,6 +45,11 @@ class Product {
   final String assetName;
 
   String? get assetPackage => null;
+
+   String get hargaRupiah {
+    final formatter = NumberFormat("#,###", "id_ID");
+    return "Rp ${formatter.format(price)}";
+   }
   // final String? assetPackage;
 
   @override
